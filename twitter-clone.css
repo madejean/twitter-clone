@@ -29,10 +29,36 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 body {
 	line-height: 1;
     box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
 }
+
+a {
+    color: darkolivegreen;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    display: inline;
+    margin: 0 30%;
+    line-height: 130px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 64px;
+}
+
+#tagline {
+    padding-top: 5px;
+    color: #C8C8C8;
+    font-size: 14pt;
+}
+
 ol, ul {
 	list-style: none;
 }
@@ -52,6 +78,12 @@ table {
 /* CSS styling starts here
 */
 
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .clearfix {
   overflow: auto;
 }
@@ -60,11 +92,11 @@ table {
     width: 992px;
     max-width: 992px;
     margin: 0 auto;
-    background-color: grey;
   
 }
 
 header {
+    background-color: white;
     position: relative;
 }
 
@@ -77,16 +109,19 @@ header {
 Work on centering this element
 */
 #navigation {
-    text-align: center;
-    clear: left;
+    display: inline-block;
+    width: 100%;
     margin: 0 auto;
-    width: 350;
+    clear: left;
+    background-color:#a4d79a;
 }
 
 #navigation li {
-    text-align: center;
     float: left;
     margin: 5px;
+    width: 32%;
+    line-height: 30px;
+    text-align: center;
 }
 
 #settings {
@@ -101,15 +136,19 @@ Work on centering this element
 
 main {
     float: left;
+    height: 100%;
     width: 75%;
-    background-color: aqua;
+    background-color:white;
+    padding: 10px;
 }
 
 aside {
     float: right;
+    height: 100%;
     width: 25%;
-    background-color: beige;
-    height: 600px;
+    background-color: #F0F0F0 ;
+    border-radius: 25px;
+    margin-top: 10px;
 }
 
 .avatar {
@@ -124,7 +163,6 @@ aside {
     position: relative;
     display: inline-block;
     padding: 10px;
-    box-sizing: border-box;
 }
 
 .username, .date {
@@ -139,8 +177,6 @@ aside {
 }
 
 .featuredUser {
-    box-sizing: border-box
-    width: 100%;
     margin: 20px;
 }
 
