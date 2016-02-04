@@ -1,0 +1,223 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    color: darkolivegreen;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    display: inline;
+    margin: 0 30%;
+    line-height: 130px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+#tagline {
+    padding-top: 5px;
+    color: #C8C8C8;
+    font-size: 14pt;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS styling starts here
+*/
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+#container {
+    width: 992px;
+    max-width: 992px;
+    margin: 0 auto;
+  
+}
+
+header {
+    background-color: white;
+    position: relative;
+}
+
+#logoContainer {
+    float: left;
+    margin: 10px;
+}
+
+/* 
+Work on centering this element
+*/
+#navigation {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    clear: left;
+    background-color:#a4d79a;
+}
+
+#navigation li {
+    float: left;
+    margin: 5px;
+    width: 32%;
+    line-height: 30px;
+    text-align: center;
+}
+
+#settings {
+    position: absolute;
+    right: 0;
+}
+
+#settings li {
+    display: inline-block;
+}
+
+
+main {
+    float: left;
+    height: 100%;
+    width: 75%;
+    background-color:white;
+    padding: 20px;
+}
+
+aside {
+    float: right;
+    height: 100%;
+    width: 25%;
+    background-color: #F0F0F0 ;
+    border-radius: 25px;
+    margin-top: 10px;
+    padding: 20px 15px;
+}
+
+.avatar {
+    float: left;
+    margin-right: 10px;
+    width: 100;
+    height: 100;
+    border-radius: 50%;
+}
+
+.post {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+.username, .date {
+    display: inline-block;
+}
+
+.username {
+    font-size: 16pt;
+}
+
+.date {
+    color: #C8C8C8;
+    font-size: 10pt;
+}
+
+.foodpic {
+    display: block;
+    margin: 20 210;
+    width: 342px;
+    height: 456px;
+}
+
+.foodpic-horizontal {
+    display: block;
+    margin: 20 180;
+    height: 320;
+    width: 430;
+}
+
+.featuredUser {
+    margin: 50px 0px;
+}
+
+.featurePic {
+    width: 125px;
+    height: 125px;
+    border-radius: 40pt;
+}
+
+.featureName {
+    font-size: 14pt;
+}
+
+.featureTag {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 18pt;
+}
+
+.quote {
+    margin: 10pt 0;
+}

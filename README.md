@@ -1,2 +1,2 @@
-# electrachong.github.io
-Project site for nomz, the social media platform for food!
+# nomz.github.io
+The social media platform for food!
