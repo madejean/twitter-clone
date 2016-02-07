@@ -1,4 +1,6 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* 
+   CSS Reset
+   http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -79,9 +81,12 @@ table {
 	border-spacing: 0;
 }
 
-/* CSS styling starts here
+/* 
+    CSS styling starts here
 */
 
+
+/* Make sure all elements operate under border-box model */
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -92,60 +97,32 @@ table {
   overflow: auto;
 }
 
+/* Wrap contents of page in a centered container of set width/height */
 #container {
     width: 992px;
     max-width: 992px;
     margin: 0 auto;
-    height: 100%;
-}
-
-header {
-    background-color: white;
-    position: relative;
-}
-
-#logoContainer {
-    float: left;
-    margin: 10px;
+    height: 100%;                    /* Set height to 100% of viewport */
 }
 
 /* 
-Work on centering this element
+    Position and display for major sections
 */
-#navigation {
-    display: inline-block;
-    width: 100%;
-    margin: 0 auto;
-    clear: left;
-    background-color:#a4d79a;
-}
 
-#navigation li {
-    float: left;
-    margin: 5px;
-    width: 32%;
-    line-height: 30px;
-    text-align: center;
+header {
+    background-color: white;
+    /* Modify position so header acts as nearest ancestor for #settings */
+    position: relative;
 }
-
-#settings {
-    position: absolute;
-    right: 0;
-}
-
-#settings li {
-    display: inline-block;
-}
-
 
 main {
     float: left;
     width: 72%;
-    height: 80%;
-    background-color:white;
+    height: 80%;                      /* Give a height so additional content will be overflow */
     margin: 5px;
     padding: 15px;
-    overflow: scroll;
+    background-color:white;
+    overflow: scroll;                 /* Set overflow to scroll */
 }
 
 aside {
@@ -157,32 +134,70 @@ aside {
     padding: 20px 15px;
 }
 
+/* Make the Welcome message fixed at the bottom right corner of screen */
 #Welcome {
     position: fixed;
     bottom: 0;
     right: 0;
     padding: 5px 5px;
     margin: 0 5px;
-    background-color: #a4d79a;
+    background-color: #a4d79a;   
 }
 
-.avatar {
+
+/* 
+Position & display for elements within header section
+*/
+
+#logoContainer {
     float: left;
+    margin: 10px;
+}
+
+#navigation {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    clear: left;
+    background-color:#a4d79a;
+}
+
+#navigation li {
+    float: left;                 /* Float links in list so they stack horizontally */    
+    margin: 5px;
+    width: 32%;                  /* Give each floated element a width so they center with margin */
+    line-height: 30px;      
+    text-align: center;
+}
+
+/* Links at top right corner of header */
+#settings {
+    position: absolute;
+    right: 0;
+}
+
+/* Make the links display on one line */
+#settings li {
+    display: inline;
+}
+
+
+/* 
+    Position & display for elements within main section
+*/
+
+.avatar {
+    float: left;                /* Float avatar to the left so text will wrap around and underneath */
     margin-right: 10px;
     width: 100;
-    height: 100;
+    height: 100;          
     border-radius: 50%;
 }
 
 .post {
     width: 100%;
-    position: relative;
     display: inline-block;
     margin: 20px 0;
-}
-
-.username, .date {
-    display: inline-block;
 }
 
 .username {
@@ -195,18 +210,24 @@ aside {
 }
 
 .foodpic {
-    display: block;
+    display: block;         /* Make sure foodpic has its own block and text follows on another line */
     margin: 20 210;
     width: 342px;
     height: 456px;
 }
 
 .foodpic-horizontal {
-    display: block;
+    display: block;         /* Make sure horizontal foodpic has its own block and text follows on another line */
     margin: 20 180;
-    height: 320;
-    width: 430;
+    height: 320px;
+    width: 430px;
 }
+
+
+/* 
+    Position & display for elements within aside
+*/
+
 
 .featuredUser {
     margin: 50px 0px;
