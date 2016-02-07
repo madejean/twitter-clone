@@ -93,14 +93,9 @@ table {
           box-sizing: border-box;
 }
 
-.clearfix {
-  overflow: auto;
-}
-
 /* Wrap page contents in a centered container of fixed width/height */
 #container {
     width: 992px;
-    max-width: 992px;
     margin: 0 auto;
     height: 100%;                    /* Set height to 100% of viewport */
 }
