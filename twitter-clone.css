@@ -34,35 +34,6 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
-}
-
-a {
-    color: darkolivegreen;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-h1 {
-    display: inline;
-    margin: 0 30%;
-    line-height: 130px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 64px;
-}
-
-h2 {
-    font-size: 24px;
-}
-
-#tagline {
-    padding-top: 5px;
-    color: #C8C8C8;
-    font-size: 14pt;
 }
 
 ol, ul {
@@ -101,6 +72,46 @@ table {
 }
 
 /* 
+    Font-styles and sizes
+*/
+
+html, body {
+    height: 100%
+}
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    color: darkolivegreen;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    display: inline;
+    margin: 0 30%;
+    line-height: 130px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+#tagline {
+    padding-top: 5px;
+    color: #C8C8C8;
+    font-size: 14pt;
+}
+
+/* 
     Position and display for major sections
 */
 
@@ -111,7 +122,7 @@ main {
     margin: 5px;
     padding: 15px;
     background-color:white;
-    overflow: scroll;                 /* Set overflow to scroll */
+    overflow: auto;                 /* Set overflow to scroll */
 }
 
 aside {
@@ -135,7 +146,7 @@ aside {
 
 
 /* 
-Position & display for elements within header section
+    Position & display for elements within header section
 */
 
 #logoContainer {
@@ -172,6 +183,11 @@ even if we set margin to auto. If we want this website to be responsive, we may 
     display: inline;
 }
 
+#editProfile {
+    padding-right: 5px;
+    border-right-style: solid;
+    border-right-width: 1px;
+}
 
 /* 
     Position & display for elements within main section
@@ -184,8 +200,8 @@ even if we set margin to auto. If we want this website to be responsive, we may 
 .avatar {
     float: left;                /* Float avatar to the left so text will wrap around and underneath */
     margin-right: 10px;
-    width: 100;
-    height: 100;          
+    width: 100px;
+    height: 100px;          
     border-radius: 50%;
 }
 
@@ -206,14 +222,14 @@ even if we set margin to auto. If we want this website to be responsive, we may 
 
 .foodpic {
     display: block;         /* Make sure foodpic has its own block and text follows on another line */
-    margin: 20 210;
+    margin: 20px 210px;
     width: 342px;
     height: 456px;
 }
 
 .foodpic-horizontal {
     display: block;         /* Make sure horizontal foodpic has its own block and text follows on another line */
-    margin: 20 180;
+    margin: 20px 180px;
     height: 320px;
     width: 430px;
 }
