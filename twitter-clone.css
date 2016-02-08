@@ -147,14 +147,17 @@ Position & display for elements within header section
     display: inline-block;
     width: 100%;
     margin: 0 auto;
-    clear: left;
     background-color:#a4d79a;
 }
 
+/* 
+Note that these elements are not technically centered, since the float makes them align to the left edge
+even if we set margin to auto. If we want this website to be responsive, we may want to work on this!
+*/
 #navigation li {
-    float: left;                 /* Float links in list so they stack horizontally */    
-    margin: 5px;
-    width: 32%;                  /* Give each floated element a width so they center with margin */
+    float: left;                 /* Float links in list so they stack horizontally */    ;
+    width: 23%;                  
+    margin: 8px;
     line-height: 30px;      
     text-align: center;
 }
@@ -173,6 +176,10 @@ Position & display for elements within header section
 /* 
     Position & display for elements within main section
 */
+
+.p {
+    padding: 10 px;
+}
 
 .avatar {
     float: left;                /* Float avatar to the left so text will wrap around and underneath */
