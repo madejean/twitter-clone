@@ -47,7 +47,11 @@
                 
                 <h2>Latest Posts</h2>
                 <div class="post">
-                    <img class="avatar" src="https://lh3.googleusercontent.com/-Tm967oOIucU/VrKXjI1cNwI/AAAAAAAAAD8/3vKPYkxhBWo/s128-Ic42/IMG_4812.JPG" alt="Josh" />
+                    
+                    <div class="imgContainer">
+                        <img class="avatar" src="https://lh3.googleusercontent.com/-Tm967oOIucU/VrKXjI1cNwI/AAAAAAAAAD8/3vKPYkxhBWo/s128-Ic42/IMG_4812.JPG" alt="Josh" />
+                    </div>
+                    
                     <p class="username"><a href="">Josh</a></p>
                     <p class="date">45min ago</p> 
                     <img class="foodpic" src="https://lh3.googleusercontent.com/-LL6a3BXAghQ/VrKXj3bDwSI/AAAAAAAAAD8/EOivkku8_lM/s912-Ic42/IMG_4814.JPG" alt="Josh's food" />
@@ -90,54 +94,65 @@
             </main>
             
             <!-- Sidebar featuring users -->
-            <aside>
                 
-                <h2>Featured Users</h2>
-                
-                <div class="featuredUser">
-                    
-                    <img class="featurePic" src="https://lh3.googleusercontent.com/-76sqZBaqAow/VrKgOFVNG7I/AAAAAAAAAF4/0-1f21-rp9E/h240/IMG_4774%2B%25281%2529.JPG" alt="Rona" />
-                    
-                    <div class="featureTag">
-                        <p class="featureName"><a href="">Rona</a></p>
-                        <p>Tagline</p>
+                <section id="featuredUsers">
+                    <h2>Featured Users</h2>
+
+                    <div class="featuredUser">
+
+                        <img class="featurePic" src="https://lh3.googleusercontent.com/-76sqZBaqAow/VrKgOFVNG7I/AAAAAAAAAF4/0-1f21-rp9E/h240/IMG_4774%2B%25281%2529.JPG" alt="Rona" /> 
+
+                        <div class="featureTag">
+                            <p class="featureName"><a href="">Rona</a></p>
+                            <p>Tagline</p>
+                        </div>
+
+                        <p class="quote">Morbi hymenaeos duis cursus commodo mauris, ligula urna integer ullamcorper.</p>
+
                     </div>
-                    
-                    <p class="quote">Morbi hymenaeos duis cursus commodo mauris, ligula urna integer ullamcorper.</p>
-                    
-                </div>
-                
-                <div class="featuredUser">
-                    
-                    <img class="featurePic" src="https://lh3.googleusercontent.com/-Cug4E-q48R4/VrKz-PBGMzI/AAAAAAAAAGc/WRnANid1ox8/h240/IMG_4822.JPG" alt="" />
-                    
-                    <div class="featureTag">
-                        <p class="featureName"><a href="">Bennett</a></p>
-                        <p>Tagline</p>
+
+                    <div class="featuredUser">
+
+                        <img class="featurePic" src="https://lh3.googleusercontent.com/-Cug4E-q48R4/VrKz-PBGMzI/AAAAAAAAAGc/WRnANid1ox8/h240/IMG_4822.JPG" alt="" />
+
+                        <div class="featureTag">
+                            <p class="featureName"><a href="">Bennett</a></p>
+                            <p>Tagline</p>
+                        </div>
+
+                        <p class="quote">Sociosqu molestie, praesent magna eleifend, amet enim leo gravida, lectus ligula eleifend sed.</p>
+
                     </div>
-                    
-                    <p class="quote">Sociosqu molestie, praesent magna eleifend, amet enim leo gravida, lectus ligula eleifend sed.</p>
-                
-                </div>
-                
-                <div class="featuredUser">
-                    
-                    <img class="featurePic" src="https://lh3.googleusercontent.com/-7-bFdeXUQuU/VrKXkKQxn7I/AAAAAAAAAD8/-ANetChXDRw/s128-Ic42/IMG_4819.JPG" alt="" />
-                    
-                    <div class="featureTag">
-                        <p class="featureName"><a href="">Siphan</a></p>
-                        <p>Tagline</p>
+
+                    <div class="featuredUser">
+
+                        <img class="featurePic" src="https://lh3.googleusercontent.com/-7-bFdeXUQuU/VrKXkKQxn7I/AAAAAAAAAD8/-ANetChXDRw/s128-Ic42/IMG_4819.JPG" alt="" />
+
+                        <div class="featureTag">
+                            <p class="featureName"><a href="">Siphan</a></p>
+                            <p>Tagline</p>
+                        </div>
+
+                        <p class="quote">Elit aliquam lectus, condimentum wisi sit, rem praesent vel justo</p>
+
                     </div>
-                    
-                    <p class="quote">Elit aliquam lectus, condimentum wisi sit, rem praesent vel justo</p>
-                    
-                </div>
+                </section>
                 
-            </aside>
+                <!-- Sidebar featuring ad -->
+
+                <section id="impossibleFitnessAd">
+                    
+                    <h2>Impossible Octopus Fitness!</h2>
+                    
+                    <p>Find out more here:</p>
+                    
+                   <a href="http://impossible-octopus-fitness.netne.net/" alt="about"><img id="OctopusAd" src="https://dl.dropboxusercontent.com/s/st20imnzozyctdp/impossible-baby-octopus.jpg" alt="Impossible Octopus Fitness"></a>
+                </section>
+                
             
             <!-- Welcome message -->
-            <section id="Welcome">
-                Welcome! We are currently in beta status. :)
+            <section>
+                <p id="Welcome">Welcome! We are currently in beta status. :)</p>
             </section>
             
         </div>

@@ -18,38 +18,38 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 
 body {
-	line-height: 1;
+    line-height: 1;
 }
 
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* 
@@ -103,6 +103,7 @@ h1 {
 }
 
 h2 {
+    margin-bottom: 20px;
     font-size: 24px;
 }
 
@@ -132,25 +133,25 @@ h2 {
 main {
     float: left;
     width: 72%;
-    height: 80%;                      /* Give a height so additional content will be overflow */
-    margin: 5px;
+    height: 100%;                      /* Give a height so additional content will be overflow */
     padding: 15px;
+    margin-top: 10px;
     background-color: white;
     overflow: auto;                 /* Set overflow to scroll */
 }
 
-aside {
+#featuredUsers, #impossibleFitnessAd {
     float: right;
     width: 25%;
-    background-color: #F0F0F0;
-    border-radius: 25px;
     margin-top: 10px;
-    padding: 20px 15px;
 }
+
 
 /* Make the Welcome message fixed at the bottom right corner of screen */
 #Welcome {
+    display: block;
     position: fixed;
+    float: left;
     bottom: 0;
     right: 0;
     padding: 5px 5px;
@@ -189,7 +190,8 @@ even if we set margin to auto. If we want this website to be responsive, we may 
 
 /* Links at top right corner of header */
 #settings {
-    text-align: right;
+    margin: 20px;
+    float: right; /*text-align: right*/
 }
 
 /* Make the links display on one line */
@@ -214,8 +216,7 @@ even if we set margin to auto. If we want this website to be responsive, we may 
 .avatar {
     float: left;                /* Float avatar to the left so text will wrap around and underneath */
     margin-right: 10px;
-    width: 100px;
-    height: 100px;          
+    max-width: 15%;          
     border-radius: 50%;
 }
 
@@ -227,16 +228,18 @@ even if we set margin to auto. If we want this website to be responsive, we may 
 
 .foodpic {
     display: block;         /* Make sure foodpic has its own block and text follows on another line */
-    margin: 20px 210px;
-    width: 342px;
-    height: 456px;
+    max-width: 50%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 27%;
 }
 
 .foodpic-horizontal {
     display: block;         /* Make sure horizontal foodpic has its own block and text follows on another line */
-    margin: 20px 180px;
-    height: 320px;
-    width: 430px;
+    max-width: 60%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 20%;
 }
 
 
@@ -244,6 +247,19 @@ even if we set margin to auto. If we want this website to be responsive, we may 
     Position & display for elements within aside
 */
 
+
+#featuredUsers {
+    background-color: #F0F0F0;
+    border-radius: 25px;
+    padding: 20px 15px;
+}
+
+#impossibleFitnessAd {
+    background-color: #F0F0F0;
+    border-radius: 25px;
+    padding: 20px 15px;
+    margin-top: 10px;
+}
 
 .featuredUser {
     margin: 50px 0px;
@@ -253,6 +269,14 @@ even if we set margin to auto. If we want this website to be responsive, we may 
     width: 125px;
     height: 125px;
     border-radius: 40pt;
+}
+
+#OctopusAd {
+    display: block;
+    margin: 10px auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 25pt;
 }
 
 .featureTag {
@@ -265,3 +289,64 @@ even if we set margin to auto. If we want this website to be responsive, we may 
     margin: 10px 0;
 }
 
+/*
+    Media Queries follow below:
+*/
+@media only screen and (min-width: 769px) and (max-width: 992px) {          /* For tablet devices */
+    html, body {
+        
+        width: 100%;
+    }
+    
+    main, #container, header {                  /* Clear scrolling behavior on main */
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+    
+    #featuredUsers, #impossibleFitnessAd, #Welcome {            /* Give each module an equal width */
+        float: left;
+        width: 30%; 
+        margin: 0 1%;
+    } 
+  
+    #Welcome {                          /* Clear fixed property on the welcome message */
+        position: relative;
+        padding: 80px 25px;
+        height: 200px;
+        border-radius: 25px;
+      }
+    
+    #navigation li {
+        width: 21%;  
+    }
+    
+}
+
+
+@media only screen and (max-width: 768px) {
+    html, body {
+        width: 100%;
+    }
+    
+    #featuredUsers, #impossibleFitnessAd, main, #container, header {            /* Clear scrolling behavior on main */
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+
+    #Welcome {                              /* Clear fixed property on the welcome message */
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin-top: 20px;
+        padding: 5px 10px;
+    }
+    
+    #navigation li {
+        width: 21%;  
+    }
+
+}
+
+    
