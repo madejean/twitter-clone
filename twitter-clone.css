@@ -125,7 +125,7 @@ h2 {
 main {
     float: left;
     width: 72%;
-    height: 100%;                      /* Give a height so additional content will be overflow */
+    height: 1100px;
     padding: 15px;
     margin-top: 10px;
     background-color: white;
@@ -256,6 +256,7 @@ even if we set margin to auto. If we want this website to be responsive, we may 
     border-radius: 25px;
     padding: 20px 15px;
     margin-top: 10px;
+    clear: right;
 }
 
 .featuredUser {
@@ -331,6 +332,21 @@ even if we set margin to auto. If we want this website to be responsive, we may 
         height: auto;
         overflow: visible;
     }
+    
+    header {
+        flex-direction: column;
+    }
+    
+    #logoContainer {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    
+    #settings {
+        align-self: center;
+        margin: 20px 0px;
+    }
 
     #Welcome {                              /* Clear fixed property on the welcome message */
         width: 100%;
@@ -345,5 +361,3 @@ even if we set margin to auto. If we want this website to be responsive, we may 
     }
 
 }
-
-    
