@@ -94,14 +94,6 @@ a:hover {
     text-decoration: underline;
 }
 
-h1 {
-    display: inline;
-    margin: 0 30%;
-    line-height: 130px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 64px;
-}
-
 h2 {
     margin-bottom: 20px;
     font-size: 24px;
@@ -133,7 +125,7 @@ h2 {
 main {
     float: left;
     width: 72%;
-    height: 100%;                      /* Give a height so additional content will be overflow */
+    height: 1100px;
     padding: 15px;
     margin-top: 10px;
     background-color: white;
@@ -164,15 +156,32 @@ main {
     Position & display for elements within header section
 */
 
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 64px;
+    align-self: center;
+}
+
 #logoContainer {
-    float: left;
-    margin: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    margin-bottom: 10px;
+}
+
+#logo {
+    align-self: center;
 }
 
 #navigation {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: space-around;
     width: 100%;
-    margin: 0 auto;
     background-color:#a4d79a;
 }
 
@@ -180,29 +189,17 @@ main {
 Note that these elements are not technically centered, since the float makes them align to the left edge
 even if we set margin to auto. If we want this website to be responsive, we may want to work on this!
 */
-#navigation li {
-    float: left;                 /* Float links in list so they stack horizontally */    ;
-    width: 23%;                  
-    margin: 8px;
-    line-height: 30px;      
-    text-align: center;
+#navigation li {     
+    padding: 15px 0;
 }
 
 /* Links at top right corner of header */
 #settings {
-    margin: 20px;
-    float: right; /*text-align: right*/
+    display: inline-flex; 
 }
 
-/* Make the links display on one line */
 #settings li {
-    display: inline;
-}
-
-#editProfile {
-    padding-right: 5px;
-    border-right-style: solid;
-    border-right-width: 1px;
+    padding: 0 5px;
 }
 
 /* 
@@ -259,6 +256,7 @@ even if we set margin to auto. If we want this website to be responsive, we may 
     border-radius: 25px;
     padding: 20px 15px;
     margin-top: 10px;
+    clear: right;
 }
 
 .featuredUser {
@@ -334,6 +332,21 @@ even if we set margin to auto. If we want this website to be responsive, we may 
         height: auto;
         overflow: visible;
     }
+    
+    header {
+        flex-direction: column;
+    }
+    
+    #logoContainer {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    
+    #settings {
+        align-self: center;
+        margin: 20px 0px;
+    }
 
     #Welcome {                              /* Clear fixed property on the welcome message */
         width: 100%;
@@ -348,5 +361,3 @@ even if we set margin to auto. If we want this website to be responsive, we may 
     }
 
 }
-
-    
