@@ -218,6 +218,10 @@ even if we set margin to auto. If we want this website to be responsive, we may 
     display: initial;
 }
 
+.replyForm {
+    display: none;
+}
+
 .p {
     padding: 10 px;
 }
