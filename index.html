@@ -12,6 +12,7 @@
         <meta name="author" content="Electra Chong and Marine Dejean">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     
+        <script scr="post_a_status.js"></script>
     </head>
     
     <body>
@@ -46,6 +47,14 @@
             
             <!-- Main section with food posts -->
             <main>
+                <a href="#" alt="Create a post" id="createAPostLink">Create a post</a>
+                
+                <form id="postForm">
+                    <br>
+                    <input type="checkbox" name="location" value="include_location"> Include a location<br>
+                    <textarea form="post_area">Write a post</textarea><br>
+                    <input type="submit" value="Post">    
+                </form>
                 
                 <h2>Latest Posts</h2>
                 <div class="post">
