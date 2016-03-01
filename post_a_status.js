@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var createAPostLink = document.getElementById("createAPostLink");
+
+    var postLink = document.getElementById("createAPostLink");
     var postForm = document.getElementById("postForm");
-    createAPostLink.addEventListener("click", showPost);
-
-    function showPost()
-        {
-            postForm.id = "showPostForm";
-        }
-
+    postLink.addEventListener("click", toggleForm);
+    
+    function toggleForm() {
+        postForm.toggle();
+    }
+    
 })
