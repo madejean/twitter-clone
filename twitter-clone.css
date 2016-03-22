@@ -222,8 +222,17 @@ even if we set margin to auto. If we want this website to be responsive, we may 
     display: none;
 }
 
+.additional_replyForm {
+    display: none;
+}
+
 .p {
     padding: 10 px;
+}
+
+#MoreStatuses {
+    background-color: #a4d79a;
+    font-size: 20pt;
 }
 
 .avatar {
@@ -241,18 +250,18 @@ even if we set margin to auto. If we want this website to be responsive, we may 
 
 .foodpic {
     display: block;         /* Make sure foodpic has its own block and text follows on another line */
-    max-width: 50%;
+    max-width: 35%;
     margin-top: 15px;
     margin-bottom: 15px;
-    margin-left: 27%;
+    margin-left: 30%;
 }
 
 .foodpic-horizontal {
     display: block;         /* Make sure horizontal foodpic has its own block and text follows on another line */
-    max-width: 60%;
+    max-width: 50%;
     margin-top: 15px;
     margin-bottom: 15px;
-    margin-left: 20%;
+    margin-left: 25%;
 }
 
 

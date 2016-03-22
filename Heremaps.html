@@ -1,0 +1,122 @@
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+  <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+  <script src="http://js.api.here.com/v3/3.0/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" charset="UTF-8"  src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://js.api.here.com/v3/3.0/mapsjs-ui.css" />
+</head>
+<body>
+  <div style="width:100%; height:100%;" id="mapContainer"></div>
+
+<script type="text/javascript" charset="utf-8">
+//Initialize the Platform object:
+var platform = new H.service.Platform({
+  'app_id': 'dkFjlfVwMNyQKp8ENCjv',
+    'app_code': 'JKCeRezZlQql9GUQHKKTmA'
+});
+
+// Get the default map types from the Platform object:
+var defaultLayers = platform.createDefaultLayers();
+
+// Instantiate the map:
+var map = new H.Map(
+document.getElementById('mapContainer'),
+defaultLayers.normal.map,
+{
+  zoom: 16,
+  center: { lng: -122.3995688, lat: 37.7921241 }
+});
+
+// Enable the event system on the map instance:
+var mapEvents = new H.mapevents.MapEvents(map);
+
+// Create the default UI:
+var ui = H.ui.UI.createDefault(map, defaultLayers);
+
+map.addEventListener('contextmenu', onContextMenuRequested);
+
+function onContextMenuRequested(contextMenuEvent) {
+  var cord=map.screenToGeo(contextMenuEvent.viewportX, contextMenuEvent.viewportY);
+  // Create the parameters for the reverse geocoding request:
+  var rgcParams = {
+    prox: cord.lat+','+cord.lng,
+    mode: 'retrieveAddresses',
+    maxresults: 1
+  };
+
+
+var gc = platform.getGeocodingService();
+
+// Send the RGC request over.
+gc.reverseGeocode(rgcParams,
+  function(result) {
+  onRGCResult(result, contextMenuEvent);
+},
+  function(error) { console.log(error); });
+}
+
+/**
+ * Processes reverse geocoder response and
+ * adds a context menu item showing the associated address.
+ */
+function onRGCResult(result, contextMenuEvent) {
+  var addressLabel = result.Response.View[0].Result[0];
+  //push contextmenu label
+  contextMenuEvent.items.push(new H.util.ContextItem({
+        label: addressLabel.Location.Address.Label
+  }));
+  console.log(addressLabel.Location.Address.Label);
+  contextMenuEvent.currentTarget.dispatchEvent(contextMenuEvent);
+  contextMenuEvent.stopPropagation();
+};
+  // Instantiate the default behavior, providing the mapEvents object: 
+var behavior = new H.mapevents.Behavior(mapEvents);
+
+map.addEventListener('tap', onMapTap);
+
+function onMapTap(evt) {
+  coordinate=map.screenToGeo(evt.currentPointer.viewportX, evt.currentPointer.viewportY);
+  // Log 'tap' and 'mouse' events:
+  var marker = new H.map.Marker(coordinate);
+  map.addObject(marker);
+  calculateIsoline('https://isoline.route.cit.api.here.com/routing/7.2/calculateisoline.json','qdoqgSFz4UCdHDRwWsM4', 'NC_xCyRHF1mEqdbI0mhYtg', coordinate.lat, coordinate.lng, 'time', '600', 'onIsolineReceived');
+}
+    
+    //function for submitting isoline request
+function calculateIsoline (apiURL, appId, appCode, latitude, longitude, rangeType, range, jsonpCallbackName) {
+  var apiCallURL = [
+    apiURL,
+    '?app_id=',
+    appId,
+    '&app_code=',
+    appCode,
+    '&mode=fastest;pedestrian', // Static mode to simplify the case.
+    '&start=',
+    ['geo!', latitude, ',', longitude].join(''),
+    '&rangetype=',
+    rangeType,
+    '&range=',
+    range,
+    '&jsonCallback=',
+    jsonpCallbackName
+  ].join('');
+  var script = document.createElement('script');
+  script.src = apiCallURL;
+  document.body.appendChild(script);
+}
+    
+// Add window resize listener to adjust the map dimensions.
+window.addEventListener('resize', function() {
+  map.getViewPort().resize();
+});
+
+// Add zoomrectangle UI feature
+ui.addControl('zoomrectangle', new H.ui.ZoomRectangle);
+var zoomrectangle = ui.getControl('zoomrectangle');
+zoomrectangle.setAlignment('right-middle');
+
+</script>
+</body>
+</html>
