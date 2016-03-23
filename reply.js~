@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-                                           
+                                            
     var replies = document.querySelectorAll(".replyLink");
     var replyForms = document.querySelectorAll(".replyForm")
     
