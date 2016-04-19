@@ -1,0 +1,188 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* Make sure all elements operate under border-box model */
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Wrap page contents in a centered container of fixed width/height */
+#container {
+    width: 992px;
+    margin: 0 auto;
+    height: 100%;                    /* Set height to 100% of viewport */
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+#tagline {
+    padding-top: 5px;
+    color: #C8C8C8;
+    font-size: 14pt;
+}
+
+/* 
+    Position & display for elements within header section
+*/
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 64px;
+    align-self: center;
+}
+
+#logoContainer {
+    display: flex;
+    flex-flow: column wrap;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+#logo {
+    align-self: center;
+}
+
+/*
+    Media Queries follow below:
+*/
+@media only screen and (min-width: 769px) and (max-width: 992px) {          /* For tablet devices */
+     html, body {
+        width: 100%;
+    }
+    
+   main, #container, header {                  /* Clear scrolling behavior on main */
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+
+@media only screen and (max-width: 768px) {
+    html, body {
+        width: 100%;
+    }
+    
+    #container, header {            /* Clear scrolling behavior on main */
+        width: 100%;
+        height: auto;
+        overflow: visible;
+    }
+    
+    header {
+        flex-direction: column;
+    }
+    
+    #logoContainer {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    
+    #settings {
+        align-self: center;
+        margin: 20px 0px;
+        }
+    }
+}
+/*CSS fot login page*/
+         .form-signin {
+            max-width: 330px;
+            padding: 15px;
+            margin: 0 auto;
+	    color: #017572;
+         }
+         
+         .form-signin .form-signin-heading,
+         .form-signin .checkbox {
+            margin-bottom: 10px;
+         }
+         
+         .form-signin .checkbox {
+            font-weight: normal;
+         }
+         
+         .form-signin .form-control {
+            position: relative;
+            height: auto;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 16px;
+         }
+         
+         .form-signin .form-control:focus {
+            z-index: 2;
+         }
+         
+         .form-signin input[type="text"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            border-color: #017572;
+	 }
+         
+         .form-signin input[type="password"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+	    border-color: #017572;
+         }
+         
+	 h2 {
+            font-size: 16px;
+            text-align: center;
+            color: #017572;
+	 }
